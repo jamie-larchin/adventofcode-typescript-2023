@@ -1,7 +1,14 @@
-import day0 from './index';
+import { one, two } from "./index";
 
-describe('On Day 0', () =>{
-    it(`part1 is identity function`, ()=>{
-        expect(day0.solveForPartOne('hello')).toBe('hello');
-    })
+const testInput1 = `hello`;
+
+const testInput2 = `hello`;
+
+describe("On Day 0", () => {
+  it(`should resolve part 1`, () => {
+    expect(one(testInput1)).toBe("hello");
+  });
+  it(`should resolve part 2`, () => {
+    expect(two(testInput2)).toBe("hello");
+  });
 });

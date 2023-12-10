@@ -1,18 +1,21 @@
-import { Day } from "../day";
+import fs from "fs";
 
-class Day0 extends Day {
+export const one = (input: string): string => {
+  const result = input.split(/\r?\n/);
+  return input;
+};
+export const two = (input: string): string => {
+  const result = input.split(/\r?\n/);
+  return input;
+};
 
-    constructor(){
-        super(0);
-    }
+const partOne = async () => {
+  const input = await fs.promises.readFile(`./inputs/day0/part1.txt`);
+  return one(input.toString());
+};
+const partTwo = async () => {
+  const input = await fs.promises.readFile(`./inputs/day0/part2.txt`);
+  return two(input.toString());
+};
 
-    solveForPartOne(input: string): string {
-        return input;
-    }
-
-    solveForPartTwo(input: string): string {
-        return input;
-    }
-}
-
-export default new Day0;
+export default { partOne, partTwo };
